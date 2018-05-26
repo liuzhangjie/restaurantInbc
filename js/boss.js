@@ -173,7 +173,7 @@ $(document).ready(function() {
 			    		content = content + `<li>${list[j].name}<em>x</em>${list[j].number} <span>${list[j].price}元</span></li>`;
 			    	}
 			    	content = content + "</ul>";
-			    	$(".custom-orders").append(`<li class = "order-detail" style = "">${content}<span>总计:${info.payment}元(实付:${(info.realPayment).toString().substr(0,6)}元)</span></li>`);
+			    	$(".custom-orders").append(`<li class = "order-detail" style = "">${content}<span>总计:${info.payment}元(实付:${(info.realPayment).toString().substr(0,5)}元)</span></li>`);
 
 			    }
 	    	}
