@@ -36,7 +36,7 @@ $(document).ready(function() {
 			    </div>
 	    	</li>`);
 	    }
-	    $(".pricebox i").text(`￥${realPayment}(原价:￥${payment})`);
+	    $(".pricebox i").text(`￥${(realPayment).toString().substr(0,4)}(原价:￥${payment})`);
 	    $(".pricebox em").text(amount);
 
 	    console.log("s1 = " + s1.length + " " + payment);
