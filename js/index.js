@@ -201,9 +201,12 @@ $(document).ready(function() {
 			    	var list = info.list;
 
 		    	 	var content = "<ul>";
+		    	 	content = content + `<li>单号: ${info.id}</li>`;
 			    	for (var j = 0; j < list.length; j++) {
 			    		content = content + `<li>${list[j].name}<em>x</em>${list[j].number} <span>${list[j].price}元</span></li>`;
 			    	}
+			    	content = content + `<li style = "color:#666;font-size:1.4rem">订单时间: ${(info.time).substring(1, info.time.length - 1)}</li>`;
+			    	content = content + `<li style = "color:#666;font-size:1.4rem">用户: ${info.address}</li>`
 			    	content = content + "</ul>";
 			    	$(".custom-orders").append(`<li class = "order-detail" style = "">${content}<span>总计:${info.payment}元(实付:${(info.realPayment).toString().substr(0,4)}元)</span></li>`);
 
